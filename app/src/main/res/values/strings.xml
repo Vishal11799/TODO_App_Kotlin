@@ -7,4 +7,8 @@
     <string name="fa_back">\uf048</string>
     <string name="fa_calendar">\uf073</string>
     <string name="fa_list">\uf03a</string>
+    <string name="add_details_task">Add details task</string>
+    <string name="task_view">Task View</string>
+    <string name="date_and_time">date and time</string>
+    <string name="task_type">Task type</string>
 </resources>

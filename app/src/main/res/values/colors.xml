@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="top_rowcolour">#026eb0</color>
     <color name="background_app">#012f53</color>
+    <color name="text_color_for_time">#6bb9ed</color>
 </resources>
