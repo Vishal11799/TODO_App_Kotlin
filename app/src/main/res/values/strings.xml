@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Assignment03</string>
+    <string name="fa_check">\uf14a</string>
+    <string name="fa_dropdown">\uf0d7</string>
+    <string name="fa_search">\uf002</string>
+    <string name="fa_more">\uf142</string>
+    <string name="fa_back">\uf048</string>
+    <string name="fa_calendar">\uf073</string>
+    <string name="fa_list">\uf03a</string>
+</resources>
