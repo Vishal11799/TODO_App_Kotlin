@@ -9,7 +9,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:id="@+id/Header_Row"
         android:layout_width="match_parent"
@@ -24,18 +23,18 @@
         app:layout_constraintTop_toTopOf="parent"
         android:padding="10dp">
 
-            <Button
-                android:id="@+id/icon_check"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:backgroundTint="@color/top_rowcolour"
-                android:text="@string/fa_check"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:fontFamily="@font/fa_solid_900"
-                android:layout_marginEnd="8dp"
-                android:padding="0dp"
-                android:background="?attr/selectableItemBackgroundBorderless"/>
+        <Button
+            android:id="@+id/icon_check"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/top_rowcolour"
+            android:text="@string/fa_check"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:fontFamily="@font/fa_solid_900"
+            android:layout_marginEnd="8dp"
+            android:padding="0dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
 
         <TextView
             android:id="@+id/textView"
@@ -88,17 +87,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="3dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:fontFamily="@font/fa_solid_900"
         app:layout_constraintTop_toBottomOf="@id/Header_Row"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/quiq_row"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/text_row_items" />
-
 
     <!-- Add Task Input Field and Button -->
     <LinearLayout
@@ -127,9 +125,6 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:minHeight="48dp"/>
-
-
-
     </LinearLayout>
 
     <!-- Bottom Ad or any other content -->
@@ -143,7 +138,7 @@
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/top_rowcolour"
+        android:backgroundTint="@color/white"
         app:srcCompat="@drawable/images01"
         tools:ignore="SpeakableTextPresentCheck"
         android:contentDescription="Add a Task" />

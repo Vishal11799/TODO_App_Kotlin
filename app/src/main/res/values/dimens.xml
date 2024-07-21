@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="main_textsize">25sp</dimen>
-    <dimen name="app_margin_top">10dp</dimen>
     <dimen name="call_text_size">16sp</dimen>
+    <dimen name="main_textsize">18sp</dimen>
+    <dimen name="app_margin_top">16dp</dimen>
 </resources>
