@@ -8,20 +8,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <!-- Header with back button and title -->
     <LinearLayout
         android:id="@+id/Header_Row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/top_rowcolour"
         android:orientation="horizontal"
+        android:padding="10dp"
         android:layout_marginTop="@dimen/app_margin_top"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="10dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/icon_check"
@@ -85,6 +85,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"/>
     </LinearLayout>
 
+    <!-- RecyclerView for displaying current Todos -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
@@ -122,12 +123,9 @@
             android:textSize="16sp"
             android:inputType="text"
             android:imeOptions="actionDone"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
             android:minHeight="48dp"/>
     </LinearLayout>
-
-    <!-- Bottom Ad or any other content -->
+    <!-- Floating Action Button to Add Task -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_task"
         android:layout_width="wrap_content"
@@ -140,7 +138,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="@color/white"
         app:srcCompat="@drawable/images01"
-        tools:ignore="SpeakableTextPresentCheck"
         android:contentDescription="Add a Task" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
