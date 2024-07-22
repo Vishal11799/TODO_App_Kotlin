@@ -60,11 +60,11 @@
                     android:layout_height="48dp"
                     android:text="@string/fa_edit"
                     android:backgroundTint="@color/top_rowcolour"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:fontFamily="@font/fa_solid_900"
                     android:padding="0dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"/>
+                    />
             </LinearLayout>
 
             <!-- Due Date Text -->

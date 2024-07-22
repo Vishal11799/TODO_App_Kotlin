@@ -11,5 +11,5 @@
     <string name="task_view">Task View</string>
     <string name="date_and_time">date and time</string>
     <string name="task_type">Task type</string>
-    <string name="fa_edit">\uf044;</string>
+    <string name="fa_edit">\uf4ff</string>
 </resources>
