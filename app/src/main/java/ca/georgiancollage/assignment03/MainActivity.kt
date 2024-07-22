@@ -18,3 +18,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+/**
+ * File name: MainActivity.kt
+ * Author's name: Vishal Chavda
+ * StudentID: 200520835
+ * Date: 22 july 2024
+ * App description: This is the main activity for the Todo App, which sets up the main layout
+ *                  and handles window insets for edge-to-edge display.
+ * Version information: 1.0
+ */
