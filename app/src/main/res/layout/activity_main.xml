@@ -34,7 +34,7 @@
             android:fontFamily="@font/fa_solid_900"
             android:layout_marginEnd="8dp"
             android:padding="0dp"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            />
 
         <TextView
             android:id="@+id/textView"
@@ -57,7 +57,7 @@
             android:fontFamily="@font/fa_solid_900"
             android:layout_marginEnd="16dp"
             android:padding="0dp"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            />
 
         <Button
             android:id="@+id/icon_search"
@@ -70,7 +70,7 @@
             android:fontFamily="@font/fa_solid_900"
             android:layout_marginEnd="16dp"
             android:padding="0dp"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            />
 
         <Button
             android:id="@+id/icon_more"
@@ -82,7 +82,7 @@
             android:textSize="24sp"
             android:fontFamily="@font/fa_solid_900"
             android:padding="0dp"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            />
     </LinearLayout>
 
     <!-- RecyclerView for displaying current Todos -->
@@ -115,15 +115,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/edit_text_background"
             android:hint="Enter Quick Task Here"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:minHeight="48dp"
             android:padding="12dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:background="@drawable/edit_text_background"
-            android:textSize="16sp"
-            android:inputType="text"
-            android:imeOptions="actionDone"
-            android:minHeight="48dp"/>
+            android:textSize="16sp" />
     </LinearLayout>
     <!-- Floating Action Button to Add Task -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton

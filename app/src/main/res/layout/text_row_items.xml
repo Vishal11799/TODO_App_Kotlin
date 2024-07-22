@@ -35,10 +35,10 @@
                     android:id="@+id/completed_switch"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:text=""
                     android:buttonTint="@color/white"
                     android:layout_marginEnd="8dp"
-                    android:backgroundTint="@color/top_rowcolour"/>
+                    android:backgroundTint="@color/top_rowcolour"
+                    />
 
                 <TextView
                     android:id="@+id/textViewTitle"
