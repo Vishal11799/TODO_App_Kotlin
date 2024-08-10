@@ -19,9 +19,9 @@ interface TASKDao {
 
     // Retrieves all TVShows from the database
     @Query("SELECT * FROM task_name")
-    suspend fun getAllTVShows(): List<TASKShow>
+    suspend fun getAllTaskShows(): List<TASKShow>
 
     // Retrieves a TVShow by its ID from the database
     @Query("SELECT * FROM task_name WHERE id = :id")
-    suspend fun getTVShowById(id: Int): TASKShow?
+    suspend fun getTaskShowById(id: Int): TASKShow?
 }
