@@ -45,14 +45,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/call_text_size"
-                    android:textStyle="bold"
-                    android:text="@string/task_view"
                     android:gravity="center_vertical"
                     android:shadowDx="2"
                     android:shadowDy="2"
-                    android:shadowRadius="3" />
+                    android:shadowRadius="3"
+                    android:text="@string/task_view"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/call_text_size"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/edit_button"
