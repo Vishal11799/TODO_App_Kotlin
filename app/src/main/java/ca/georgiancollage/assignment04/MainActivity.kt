@@ -18,20 +18,20 @@ class MainActivity : AppCompatActivity()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
             //array of the mock data
-        val tasks = arrayOf(
-            TASKShow("Finish Project Report", true, "2024-08-12", "14:00", "Work"),
-            TASKShow("Grocery Shopping", false, "2024-08-10", "18:00", "Personal"),
-            TASKShow("Doctor's Appointment", false, "2024-08-11", "09:30", "Health"),
-            TASKShow("Team Meeting", true, "2024-08-09", "10:00", "Work"),
-            TASKShow("Workout Session", false, "2024-08-10", "07:00", "Fitness")
-        )
-            //instance  of firest adptor
-        val firstAdapter = FirstAdapter(tasks)
-// Use view binding to replace findViewById or synthetic properties
-        binding.firstRecyclerView.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = firstAdapter
-        }
+//        val tasks = arrayOf(
+//            TASKShow("Finish Project Report", true, "2024-08-12", "14:00", "Work"),
+//            TASKShow("Grocery Shopping", false, "2024-08-10", "18:00", "Personal"),
+//            TASKShow("Doctor's Appointment", false, "2024-08-11", "09:30", "Health"),
+//            TASKShow("Team Meeting", true, "2024-08-09", "10:00", "Work"),
+//            TASKShow("Workout Session", false, "2024-08-10", "07:00", "Fitness")
+//        )
+//            //instance  of firest adptor
+//        val firstAdapter = FirstAdapter(tasks)
+//// Use view binding to replace findViewById or synthetic properties
+//        binding.firstRecyclerView.apply {
+//            layoutManager = LinearLayoutManager(context)
+//            adapter = firstAdapter
+//        }
 
     }
 }
