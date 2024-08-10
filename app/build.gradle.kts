@@ -54,13 +54,21 @@ dependencies {
 //    implementation(libs.androidx.room.runtime)
 //    kapt(libs.androidx.room.compiler)
 
-    //Room
-    //Room
+//Room
     //Room
     implementation(libs.androidx.room.runtime)
-    implementation(libs.room.ktx)
+    implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.common)
-    kapt(libs.androidx.room.compiler)
+    kapt(libs.room.compiler)
+
+
+
+
+
+
+
+
+
 
 
 
