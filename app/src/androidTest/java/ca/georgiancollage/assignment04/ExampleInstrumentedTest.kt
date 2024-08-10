@@ -1,4 +1,4 @@
-package ca.georgiancollage.assignment03
+package ca.georgiancollage.assignment04
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package ca.georgiancollage.assignment03
+package ca.georgiancollage.assignment04
 
 import org.junit.Test
 
