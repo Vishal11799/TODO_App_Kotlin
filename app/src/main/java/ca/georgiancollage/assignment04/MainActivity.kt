@@ -1,40 +1,63 @@
 package ca.georgiancollage.assignment04
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import ca.georgiancollage.assignment04.databinding.ActivityMainBinding
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity()
 {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var dataManager: DataManager
+
+    // Adapter for the RecyclerView, with a click listener to open the DetailsActivity
+    private val adapter = TASKShowListAdapter { taskShow: TASKShow ->
+        val intent = Intent(this, DetailsActivity::class.java).apply {
+            putExtra("taskShowId", taskShow.id)
+        }
+        startActivity(intent)
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-            //array of the mock data
-//        val tasks = arrayOf(
-//            TASKShow("Finish Project Report", true, "2024-08-12", "14:00", "Work"),
-//            TASKShow("Grocery Shopping", false, "2024-08-10", "18:00", "Personal"),
-//            TASKShow("Doctor's Appointment", false, "2024-08-11", "09:30", "Health"),
-//            TASKShow("Team Meeting", true, "2024-08-09", "10:00", "Work"),
-//            TASKShow("Workout Session", false, "2024-08-10", "07:00", "Fitness")
-//        )
-//            //instance  of firest adptor
-//        val firstAdapter = FirstAdapter(tasks)
-//// Use view binding to replace findViewById or synthetic properties
-//        binding.firstRecyclerView.apply {
-//            layoutManager = LinearLayoutManager(context)
-//            adapter = firstAdapter
-//        }
 
+
+
+        dataManager = DataManager.instance(this)
+
+        binding.firstRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.firstRecyclerView.adapter = adapter
+
+
+        loadTASKShows()
+        binding.addTask.setOnClickListener {
+            val intent = Intent(this, DetailsActivity::class.java)
+            startActivity(intent)
+        }
+    }
+        override fun onResume() {
+            super.onResume()
+            loadTASKShows()
+        }
+
+        private fun loadTASKShows() {
+            lifecycleScope.launch {
+                val taskShows = dataManager.getAllTaskShows()
+                adapter.submitList(taskShows)
+
+        }
     }
 }
+
 
 /**
  * File name: MainActivity.kt
