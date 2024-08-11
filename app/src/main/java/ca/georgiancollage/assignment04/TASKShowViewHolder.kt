@@ -1,22 +1,26 @@
-package ca.georgiancollage.assignment04
+    package ca.georgiancollage.assignment04
 
-import androidx.recyclerview.widget.RecyclerView
-import ca.georgiancollage.assignment04.databinding.TextRowItemsBinding
+    import androidx.recyclerview.widget.RecyclerView
+    import ca.georgiancollage.assignment04.databinding.TextRowItemsBinding
 
-class TASKShowViewHolder(private val binding: TextRowItemsBinding) : RecyclerView.ViewHolder(binding.root) {
+    class TASKShowViewHolder(
+        private val binding: TextRowItemsBinding,
+        private val onItemClicked: (TASKShow) -> Unit,
+        private val onEditButtonClicked: (TASKShow) -> Unit
+    ) : RecyclerView.ViewHolder(binding.root) {
 
-    // Binds the data from a TVShow object to the views in the ViewHolder.
-    fun bind(taskShow: TASKShow) {
-        // Set the title of the task to the TextView
-        binding.textViewTitle.text = taskShow.title
+        fun bind(taskShow: TASKShow) {
+            binding.textViewTitle.text = taskShow.title ?: "Untitled Task"
+            binding.textViewTime.text = "${taskShow.dueDate ?: "No Date"} ${taskShow.dueTime ?: "No Time"}"
+            binding.textViewType.text = taskShow.taskType ?: "General"
+            binding.completedSwitch.isChecked = taskShow.isCompleted
 
-        // Set the due date and time of the task to the TextView
-        binding.textViewTime.text = "${taskShow.dueDate} ${taskShow.dueTime}"
+            binding.root.setOnClickListener {
+                onItemClicked(taskShow)
+            }
 
-        // Set the task type to the TextView
-        binding.textViewType.text = taskShow.taskType
-
-        // Set the state of the task completion to the Switch
-        binding.completedSwitch.isChecked = taskShow.isCompleted
+            binding.editButton.setOnClickListener {
+                onEditButtonClicked(taskShow)
+            }
+        }
     }
-}
