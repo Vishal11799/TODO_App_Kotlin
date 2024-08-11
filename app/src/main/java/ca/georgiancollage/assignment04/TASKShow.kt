@@ -15,5 +15,6 @@ data class TASKShow(
     val isCompleted: Boolean,
     val dueDate: String,
     val dueTime: String,
-    val taskType: String
+    val taskType: String,
+    val notes: String
 )
