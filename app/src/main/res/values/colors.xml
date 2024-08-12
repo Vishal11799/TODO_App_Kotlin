@@ -5,4 +5,6 @@
     <color name="text_color_for_time">#FFFFFF</color>
     <color name="card_background">#0052A5</color>
     <color name="item_background">#004080</color>
+    <color name="grey">#BDBDBD</color>
+
 </resources>

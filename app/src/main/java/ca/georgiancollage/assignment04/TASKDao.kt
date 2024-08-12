@@ -5,8 +5,7 @@ import androidx.room.*
 @Dao
 interface TASKDao {
 
-    // Inserts a TVShow into the database
-    // If a TVShow with the same ID already exists, it will be replaced
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(taskShow: TASKShow)
     // updates an existing TVShow in the database

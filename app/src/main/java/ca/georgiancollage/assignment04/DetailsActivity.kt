@@ -24,9 +24,10 @@ class DetailsActivity : AppCompatActivity() {
         binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val taskTypes = arrayOf("Work", "Private")
         val adapter = ArrayAdapter(this, R.layout.simple_spinner_item, taskTypes)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item)
         binding.spinnerTaskType.adapter = adapter
 
         dataManager = DataManager.instance(this)
@@ -39,17 +40,14 @@ class DetailsActivity : AppCompatActivity() {
             binding.deleteButton.visibility = View.GONE
         }
 
-        // CalendarView on date change listener
+
         binding.calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val selectedDate = "$year-${month + 1}-$dayOfMonth"
             binding.textViewDueDate.text = selectedDate
-            binding.calendarView.visibility = View.GONE // Hide the calendar after selecting a date
+            binding.calendarView.visibility = View.GONE
         }
 
         binding.backButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
             finish()
         }
 
@@ -74,7 +72,7 @@ class DetailsActivity : AppCompatActivity() {
                 binding.editNotes.setText(it.notes)
                 binding.textViewDueDate.text = it.dueDate
 
-                // Set the spinner selection based on the task type
+
                 val taskTypePosition = (binding.spinnerTaskType.adapter as ArrayAdapter<String>).getPosition(it.taskType)
                 binding.spinnerTaskType.setSelection(taskTypePosition)
             }

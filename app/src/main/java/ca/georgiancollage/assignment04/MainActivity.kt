@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         onEditButtonClicked = { taskShow ->
             val intent = Intent(this, DetailsActivity::class.java).apply {
                 putExtra("taskShowId", taskShow.id)
-                putExtra("isEditMode", true)  // Pass an extra to indicate edit mode
+                putExtra("isEditMode", true)
             }
             startActivity(intent)
         }

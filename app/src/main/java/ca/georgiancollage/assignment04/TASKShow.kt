@@ -12,7 +12,7 @@ data class TASKShow(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val title: String,
-    val isCompleted: Boolean,
+    var isCompleted: Boolean,
     val dueDate: String,
     val dueTime: String,
     val taskType: String,
